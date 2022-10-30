@@ -30,7 +30,7 @@
 		<property name="driverClassName"
 			value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
 		<property name="url"
-			value="jdbc:sqlserver://localhost:1433;databaseName=GeneralAssignmentATJBOpt2;" />
+			value="jdbc:sqlserver://localhost:1433;databaseName=datvexe;" />
 		<property name="username" value="sa" />
 		<property name="password" value="123" />
 	</bean>

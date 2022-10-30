@@ -1,0 +1,163 @@
+ body{
+    background: #E9E9E9;
+  }
+
+  
+  .sidebar-dropdown > a > span{
+    font-size: 13px;
+  }
+
+  .sidebar-dropdown > a{
+    padding: 15px 0px 15px 20px!important;
+  }
+
+/*start header*/
+.height-header{
+  height: 60px;
+}
+
+.wrapper-logo{
+   height: 100%; 
+   width: 84px;
+   padding: 10px 21px;
+}
+
+.wapper-search{
+  right: 16px; 
+  top: 20px;
+  font-size: 10px;
+}
+
+.search{
+  color: white; 
+  font-size: 23px;
+}
+/*end header*/
+
+/*start menu*/
+.bg-header-menu{
+  width: 50px; 
+  top: 4px;left: 30px;
+}
+
+.bg-header-menu>img{
+  border-radius: 50%;
+}
+
+.bg-header-menu>div{
+  top:60px;
+}
+
+.bg-header-menu>div>p{
+  line-height: 0px;
+}
+.font-size-small{
+  font-size: 13px;
+}
+
+.font-arrow-down{
+  right: 22px;top: 70px;
+}
+
+.font-arrow-down > i{
+  font-size: 18px;
+  font-weight: 500;
+  color: white;
+}
+
+.font-add{
+  right: 10px; 
+  top: 14px; 
+  font-size: 10px;
+}
+
+.font-add > i{
+  font-size: 14px;
+  font-weight: 600;
+}
+/*end menu*/
+
+
+.submenu-active > a{
+  padding-left: 43px!important;
+  font-weight: 700;
+}
+
+li.submenu-active > a:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  content: "\f105";
+ 
+  position: absolute;
+  left: 30px;
+  top: 7px;
+  font-size: 16px;
+}
+
+body {
+  font-size: 0.9rem;
+}
+
+.page-wrapper {
+  height: 100vh;
+}
+
+.sidebar-wrapper ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+  
+/*thanh cuon*/
+.sidebar-content { 
+  height: 420px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.sidebar-wrapper .sidebar-menu ul li a {
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  position: relative;
+  padding: 8px 30px 8px 20px;
+}
+
+
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown .sidebar-submenu li {
+  padding-left: 25px;
+  font-size: 13px;
+}
+
+
+.sidebar-wrapper .sidebar-menu .sidebar-submenu {
+  display: none;
+}
+
+.sidebar-wrapper .sidebar-menu .sidebar-dropdown.active > a:after {
+  transform: rotate(90deg);
+  right: 17px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 7px;
+}
+::-webkit-scrollbar-thumb {
+  background: #525965;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+
+.sidebar-menu ul li a,
+.chiller-theme .sidebar-footer>a {
+    color: #333333;
+}
+
+.sidebar-menu ul li:hover>a,
+.sidebar-menu .sidebar-dropdown.active>a,
+.sidebar-header .user-info,
+.sidebar-brand>a:hover,
+.sidebar-footer>a:hover i{
+    color: #119783;
+}
