@@ -4,4 +4,5 @@
 
 # Project
 - Đặt vé xe
-- Quản lý báng hàng
+- Quản lý bán hàng
+- Quản lý nhà hàng

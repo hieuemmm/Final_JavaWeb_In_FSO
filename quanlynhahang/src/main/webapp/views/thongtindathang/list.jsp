@@ -22,8 +22,8 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
 	crossorigin="anonymous"></script>
-<title>Quản Lý Bán Hàng | Danh sách đơn hàng</title>
-<link rel="stylesheet" href="/quanlybanghang/resources/css/index.css">
+<title>Quản Lý Nhà Hàng | Danh sách đơn hàng</title>
+<link rel="stylesheet" href="/quanlynhahang/resources/css/index.css">
 </head>
 <body>
 	<%@ include file="../header.jsp"%>
@@ -31,13 +31,13 @@
 		<!--Header of page-->
 		<div class="d-flex justify-content-between my-2">
 			<h3>Danh sách đơn hàng</h3>
-			<a href="/quanlybanghang/add">
+			<a href="/quanlynhahang/add">
 				<button class="btn btn-success btn-search">Tạo đơn hàng</button>
 			</a>
 		</div>
-		<!-- 
+
 		<div class="d-flex justify-content-between mt-2">
-			<form id="formSearch" class="w-100 d-flex justify-content-between" method="GET" action="/quanlybanghang/computer/search">
+			<form id="formSearch" class="w-100 d-flex justify-content-between" method="GET" action="/quanlynhahang/search">
 				<div class="form-group col pl-0 mb-0">
 					<input type="text" class="form-control " id="inputSearch" name="search" placeholder="Nhập từ khoá..." value="${search}"/> 
 					<span class="form-message"></span>
@@ -45,40 +45,7 @@
 				<button type="submit" class="btn btn-primary ml-auto btn-search">Tìm kiếm</button>
 			</form>
 		</div> 
-		-->
-		<div class="d-flex justify-content-between mt-2">
-			<form:form 
-				id="formSearch" 
-				class="w-100 d-flex justify-content-end align-items-end" 
-				method="GET" 
-				modelAttribute="timKiem"
-				action="/quanlybanghang/search">
-				<div class="form-group form-inline mr-2 mb-0">
-					<label class="mr-2">trangThaiDonHang:</label>
-				    <form:select 
-				        id="trangThaiDonHang" 
-				        class="custom-select" 
-				        path="trangThaiDonHang" 
-				        value="${thongTinDonHang.trangThaiDonHang}">
-				        <form:option value="">--trangThaiDonHang--</form:option>
-				        <form:option value="Chua giao hang">Chua giao hang</form:option>
-				        <form:option value="Da giao hang">Da giao hang</form:option>
-				    </form:select> 
-				    <span class="form-message"></span>
-				</div>
-				<div class="form-group form-inline mr-2 mb-0">
-					<label class="mr-2">ngayHenTra:</label>
-				    <form:input type="date" 
-				        class="form-control" 
-				        id="ngayHenTra" 
-				        path="ngayHenTra" 
-				        placeholder="Nhập ngayHenTra..." 
-				        value="${thongTinDonHang.ngayHenTra}"/> 
-				    <span class="form-message"></span>
-				</div>
-				<button type="submit" class="btn btn-primary btn-search">Tìm kiếm</button>
-			</form:form>
-		</div>
+		
 		<!--Báo thành công-->
 		<p class="text-center text-success">${messageSuccess}</p>
 		<!--Danh sách dữ liệu-->
@@ -86,44 +53,38 @@
 			<thead>
 				<tr>
 					<th scope="col">#</th>
-					<th scope="col">maDH</th>
-					<th scope="col">maKH</th>
-					<th scope="col">tenKH</th>
-					<th scope="col">gioiTinh</th>
-					<th scope="col">soDienThoai</th>
-					<th scope="col">ngayDatMay</th>
-					<th scope="col">trangThaiDonHang</th>
-					<th scope="col">ngayHenTra</th>
-					<th scope="col">trangThaiDonHang</th>
-					<th scope="col">ngayTra</th>
+					<th scope="row">maOrder</th>
+					<th scope="row">tenKH</th>
+					<th scope="row">maLoaiKH</th>
+					<th scope="row">soDienThoai</th>
+					<th scope="row">ngayOrder</th>
+					<th scope="row">soNguoiLon</th>
+					<th scope="row">soTreEm</th>
+					<th scope="row">gioVao</th>
+					<th scope="row">tienThanhToan</th>
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach items="${donHangs}" var="donHang" varStatus="var">
+				<c:forEach items="${ttOrders}" var="ttOrder" varStatus="var">
 					<tr>
 						<th scope="row">${var.count}</th>
-						<td>
-							<a class="text-decoration-none" href="/quanlybanghang/detail/${donHang.maDH}">
-								${donHang.maDH}
-							</a>
-						</td>
-						<td>${donHang.khachHang.maKH}</td>
-						<td>${donHang.khachHang.tenKH}</td>
-						<td>${donHang.khachHang.gioiTinh}</td>
-						<td>${donHang.khachHang.soDienThoai}</td>
-						<td>${donHang.ngayDatMay}</td>
-						<td>${donHang.trangThaiDonHang}</td>
-						<td>${donHang.ngayHenTra}</td>
-						<td>${donHang.trangThaiDonHang}</td>
-						<td>${donHang.ngayTra}</td>
+						<td>${ttOrder.maOrder}</td>
+						<td>${ttOrder.tenKH}</td>
+						<td>${ttOrder.maLoaiKH}</td>
+						<td>${ttOrder.soDienThoai}</td>
+						<td>${ttOrder.ngayOrder}</td>
+						<td>${ttOrder.soNguoiLon}</td>
+						<td>${ttOrder.soTreEm}</td>
+						<td>${ttOrder.gioVao}</td>
+						<td>${ttOrder.tienThanhToan}</td>
 						<td >
-							<a class="text-decoration-none" href="/quanlybanghang/edit/${donHang.maDH}">
+							<a class="text-decoration-none" href="/quanlynhahang/edit/${ttOrder.maOrder}">
 								<i class="bi bi-pencil-square" style="font-size: 25px; color:blue"></i>
 							</a>
 							<i 
 								class="bi bi-trash3-fill" 
 								style="font-size: 25px;color:red"
-								dataURL="/quanlybanghang/delete/${donhang.maDH}"
+								dataURL="/quanlynhahang/delete/${ttOrder.maOrder}"
 								onclick="deleteFunction(event)"
 							></i>
 						</td>

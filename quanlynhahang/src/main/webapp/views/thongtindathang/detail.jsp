@@ -21,15 +21,15 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
 	crossorigin="anonymous"></script>
-<title>Quản Lý Bán Hàng | Tạo đơn hàng</title>
-<link rel="stylesheet" href="/quanlybanghang/resources/css/index.css">
+<title>Quản Lý Nhà Hàng | Tạo đơn hàng</title>
+<link rel="stylesheet" href="/quanlynhahang/resources/css/index.css">
 </head>
 <body>
 	<%@ include file="../header.jsp"%>
 	<div class="container mt-2">
 		<div class="d-flex justify-content-between my-2">
 			<h3>Chi tiết đơn hàng</h3>
-			<a href="/quanlybanghang/">
+			<a href="/quanlynhahang/">
 				<button class="btn btn-dark btn-search">Quay lại</button>
 			</a>
 		</div>
@@ -70,7 +70,7 @@
 		integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
 		crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
-	<script src="/quanlybanghang/resources/js/Validator.js"></script>
+	<script src="/quanlynhahang/resources/js/Validator.js"></script>
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
 			var currentDate = new Date().toISOString().split("T")[0];

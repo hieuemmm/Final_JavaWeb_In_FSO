@@ -129,9 +129,9 @@ public class DonHang {
 	}
 
 	public boolean isTimKiem(TimKiem timKiem) {
-		System.out.println(DateUtil.compareTo(timKiem.getNgayHenTra(), timKiem.getNgayHenTra()));
+		System.out.println(DateUtil.compareToDate(timKiem.getNgayHenTra(), timKiem.getNgayHenTra()));
 		if (timKiem.getTrangThaiDonHang().equals(trangThaiDonHang)
-				&& DateUtil.compareTo(ngayHenTra, timKiem.getNgayHenTra())<=0)
+				&& DateUtil.compareToDate(ngayHenTra, timKiem.getNgayHenTra())<=0)
 			return true;
 		return false;
 	}

@@ -21,18 +21,18 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
 	crossorigin="anonymous"></script>
-<title>Quản Lý Bán Hàng | 404 Pgae</title>
+<title>Quản Lý Nhà Hàng | 404 Pgae</title>
 <link rel="stylesheet" href="/GeneralAssignmentATJBopt2/resources/css/index.css">
 </head>
 <body>
 	<%@ include file="./header.jsp"%>
 	<center class="h1">404 page</center>
 	<div class="container-fuild d-flex justify-content-center " >
-		<img style="object-fit:cover;max-width: 500px;" alt="Error" src="/quanlybanghang/resources/images/404 error with person looking for-cuate.svg">
+		<img style="object-fit:cover;max-width: 500px;" alt="Error" src="/quanlynhahang/resources/images/404 error with person looking for-cuate.svg">
 	</div>
 	<center>
 		Mô tả lỗi : <span>Trang này không tồn tại</span>
-		<strong><a href="/quanlybanghang/">Quay về trang chủ</a></strong>
+		<strong><a href="/quanlynhahang/">Quay về trang chủ</a></strong>
 	</center>
 	<%@ include file="./footer.jsp"%>
 	<script

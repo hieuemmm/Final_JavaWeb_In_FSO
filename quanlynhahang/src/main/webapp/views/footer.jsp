@@ -4,6 +4,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <footer class="page-footer font-small blue mt-2">
   <div class="footer-copyright text-center py-3">
-  	© 2022 Copyright: <a href="/quanlybanghang/">Final.java</a>
+  	© 2022 Copyright: <a href="/quanlynhahang/">Final.java</a>
   </div>
 </footer>

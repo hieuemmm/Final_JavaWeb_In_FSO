@@ -9,7 +9,7 @@ public class UUID_Util {
 	/**
 	 * @Authour : HieuVV4
 	 * @Birthday : 2000-08-26
-	 * @param prefix
+	 * @param prefix 
 	 */
 	public static String getNumber(String prefix, int length) {
 		return prefix + new Timestamp(System.currentTimeMillis())

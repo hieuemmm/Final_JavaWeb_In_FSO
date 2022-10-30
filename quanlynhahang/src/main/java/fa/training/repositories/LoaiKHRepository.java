@@ -1,10 +1,11 @@
 package fa.training.repositories;
 
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import fa.training.entites.KhachHang;
+import fa.training.entites.LoaiKH;
+
 @Repository
-public interface KhachHangRepository extends JpaRepository<KhachHang, String>{
+public interface LoaiKHRepository extends JpaRepository<LoaiKH, String>{
+
 }
