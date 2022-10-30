@@ -10,6 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import fa.training.dto.TimKiem;
+import fa.training.utils.DateUtil;
 
 @Entity
 public class DonHang {
@@ -128,10 +129,10 @@ public class DonHang {
 	}
 
 	public boolean isTimKiem(TimKiem timKiem) {
+		System.out.println(DateUtil.compareTo(timKiem.getNgayHenTra(), timKiem.getNgayHenTra()));
 		if (timKiem.getTrangThaiDonHang().equals(trangThaiDonHang)
-				&& timKiem.getNgayHenTra().equals(timKiem.getNgayHenTra())) {
+				&& DateUtil.compareTo(ngayHenTra, timKiem.getNgayHenTra())<=0)
 			return true;
-		}
 		return false;
 	}
 

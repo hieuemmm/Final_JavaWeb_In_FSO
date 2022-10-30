@@ -53,7 +53,7 @@ public class ManagerController {
 	 * @Birthday : 2000-08-26
 	 */
 	@GetMapping(value = "/")
-	public String datvexe(Model model) {
+	public String defaultPage(Model model) {
 		return list(model);
 	}
 
@@ -85,7 +85,7 @@ public class ManagerController {
 			model.addAttribute("donHangs", donHangs);
 			throw new NullPointerException();
 		} catch (NullPointerException e) {
-			model.addAttribute("exception", e.toString());
+			model.addAttribute("exception", "NullPointerException không mong muốn");
 			return "error";
 		}
 	}
@@ -129,34 +129,57 @@ public class ManagerController {
 		try {
 			System.out.println(thongTinDonHang.getMaKH());
 			String maKH = thongTinDonHang.getMaKH();
+			// String maKH = "khong ton tai";//Giả lập maKH không tồn tại
 			Optional<KhachHang> khachHang = Optional.ofNullable(khachHangService.findById(maKH));
-			if (khachHang.isPresent()) {
-				DonHang donHang = new DonHang();
-				donHang.setMaDH("DH" + UUID_Util.getTimeStamp());
-				donHang.setMaKH(thongTinDonHang.getMaKH());
-				donHang.setNgayDatMay(thongTinDonHang.getNgayDatMay());
-				donHang.setTrangThaiThanhToan(thongTinDonHang.getTrangThaiThanhToan());
-				donHang.setNgayTra(thongTinDonHang.getNgayTra());
-				donHang.setTrangThaiDonHang(thongTinDonHang.getTrangThaiDonHang());
-				donHang.setNgayHenTra(thongTinDonHang.getNgayHenTra());
-				donHang.setKhachHang(khachHang.get());
-				System.out.println(donHang);
-				donHang = donHangService.add(donHang);
-				ChiTietDonHang chiTietDonHang = new ChiTietDonHang();
-				chiTietDonHang.setMaCTDH("CTDH" + UUID_Util.getTimeStamp());
-				chiTietDonHang.setMaDH(donHang.getMaDH());
-				chiTietDonHang.setTenSP(thongTinDonHang.getTenSP());
-				chiTietDonHang.setSoTien(thongTinDonHang.getSoTien());
-				chiTietDonHang.setGhiChu(thongTinDonHang.getGhiChu());
-				chiTietDonHang = chiTietDonHangService.add(chiTietDonHang);
-				model.addAttribute("messageSuccess", "Tạo đơn hàng thành công");
-				System.out.println("Tạo đơn hàng thành công");
-				return list(model);
-			} else {
-				model.addAttribute("messageError", "Ma khach hang khong ton tai trong he thong");
-				model.addAttribute("thongTinDonHang", thongTinDonHang);
+			// Truyền lại thongtindonhang/add nếu validate thất bại
+			List<KhachHang> khachHangs = khachHangService.findAll();
+			model.addAttribute("khachHangs", khachHangs);
+			model.addAttribute("thongTinDonHang", thongTinDonHang);
+			// Validate MaKH
+			if (!khachHang.isPresent()) {
+				model.addAttribute("messageErrorMaKH", "Ma khach hang khong ton tai trong he thong");
+				System.out.println("Khong ton tai");
 				return "thongtindonhang/add";
 			}
+			// Validate soTien tối thiểu
+			String tenSP = thongTinDonHang.getTenSP();
+			int soTien = thongTinDonHang.getSoTien();
+			if (tenSP.startsWith("Ao")) {
+				if (soTien < 100000) {
+					model.addAttribute("messageErrorSoTien", "So tien khong hop le");
+					return "thongtindonhang/add";
+				}
+			}
+			if (tenSP.startsWith("Quan") || tenSP.startsWith("Chan vay")) {
+				if (soTien < 150000) {
+					model.addAttribute("messageErrorSoTien", "So tien khong hop le");
+					return "thongtindonhang/add";
+				}
+			}
+			// Validate thành công
+			// Tạo đơn hàng
+			DonHang donHang = new DonHang();
+			donHang.setMaDH(UUID_Util.getNumber("DH", 7));
+			donHang.setMaKH(thongTinDonHang.getMaKH());
+			donHang.setNgayDatMay(thongTinDonHang.getNgayDatMay());
+			donHang.setTrangThaiThanhToan(thongTinDonHang.getTrangThaiThanhToan());
+			donHang.setNgayTra(thongTinDonHang.getNgayTra());
+			donHang.setTrangThaiDonHang(thongTinDonHang.getTrangThaiDonHang());
+			donHang.setNgayHenTra(thongTinDonHang.getNgayHenTra());
+			donHang.setKhachHang(khachHang.get());
+			donHang = donHangService.add(donHang);
+			System.out.println("donHang thành công");
+			// Tạo chi tiết đơn hàng
+			ChiTietDonHang chiTietDonHang = new ChiTietDonHang();
+			chiTietDonHang.setMaCTDH(UUID_Util.getNumber("CTDH", 5));
+			chiTietDonHang.setMaDH(donHang.getMaDH());
+			chiTietDonHang.setTenSP(thongTinDonHang.getTenSP());
+			chiTietDonHang.setSoTien(thongTinDonHang.getSoTien());
+			chiTietDonHang.setGhiChu(thongTinDonHang.getGhiChu());
+			chiTietDonHang = chiTietDonHangService.add(chiTietDonHang);
+			model.addAttribute("messageSuccess", "Tạo đơn hàng thành công");
+			System.out.println("chiTietDonHang thành công");
+			return list(model);
 		} catch (Exception e) {
 			return "error";
 		}

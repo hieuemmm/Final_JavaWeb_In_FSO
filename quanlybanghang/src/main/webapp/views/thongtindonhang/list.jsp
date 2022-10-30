@@ -22,7 +22,7 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
 	crossorigin="anonymous"></script>
-<title>Quản lý báng hàng | Danh sách đơn hàng</title>
+<title>Quản Lý Bán Hàng | Danh sách đơn hàng</title>
 <link rel="stylesheet" href="/quanlybanghang/resources/css/index.css">
 </head>
 <body>
@@ -53,7 +53,8 @@
 				method="GET" 
 				modelAttribute="timKiem"
 				action="/quanlybanghang/search">
-				<div class="form-group mr-2 mb-0">
+				<div class="form-group form-inline mr-2 mb-0">
+					<label class="mr-2">trangThaiDonHang:</label>
 				    <form:select 
 				        id="trangThaiDonHang" 
 				        class="custom-select" 
@@ -65,7 +66,8 @@
 				    </form:select> 
 				    <span class="form-message"></span>
 				</div>
-				<div class="form-group mr-2 mb-0">
+				<div class="form-group form-inline mr-2 mb-0">
+					<label class="mr-2">ngayHenTra:</label>
 				    <form:input type="date" 
 				        class="form-control" 
 				        id="ngayHenTra" 

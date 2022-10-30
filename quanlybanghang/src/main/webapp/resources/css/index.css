@@ -32,6 +32,9 @@ h1 {
 	color: red !important;
 }
 /* VALIDATION */
+.form-message-server{
+	color: #f33a58;
+}
 .form-group .form-message {
 	display: none;
 }

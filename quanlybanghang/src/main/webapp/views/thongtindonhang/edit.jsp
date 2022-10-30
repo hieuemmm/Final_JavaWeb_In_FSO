@@ -21,7 +21,7 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
 	crossorigin="anonymous"></script>
-<title>Quản lý báng hàng | Sửa đơn hàng</title>
+<title>Quản Lý Bán Hàng | Sửa đơn hàng</title>
 <link rel="stylesheet" href="/quanlybanghang/resources/css/index.css">
 </head>
 <body>
@@ -204,11 +204,12 @@
 								Validator.isCondition('#trangThaiThanhToan',
 										()=>{
 											if(document.getElementById("trangThaiDonHang").value == "Da giao hang"){
-												if(document.getElementById("trangThaiThanhToan").value=="Da thanh toan"){
-													return true;
+												console.log("trangThaiDonHang",document.getElementById("trangThaiDonHang").value);
+												if(document.getElementById("trangThaiThanhToan").value != "Da thanh toan"){
+													return false;
 												}
 											}
-											return false;
+											return true;
 										},
 										'Can thanh toan don hang truoc khi ban giao'),
 								//Validator.isNumberPhoneHas10Has11AndStartWith0('#soDienThoai','So dien thoai sai dinh dang'),

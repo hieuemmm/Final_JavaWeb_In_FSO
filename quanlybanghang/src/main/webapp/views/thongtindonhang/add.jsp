@@ -21,7 +21,7 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
 	crossorigin="anonymous"></script>
-<title>Quản lý báng hàng | Tạo đơn hàng</title>
+<title>Quản Lý Bán Hàng | Tạo đơn hàng</title>
 <link rel="stylesheet" href="/quanlybanghang/resources/css/index.css">
 </head>
 <body>
@@ -59,6 +59,7 @@
 				        	<form:option value="${khachHang.maKH}">${khachHang.maKH} - ${khachHang.tenKH}</form:option>
 				        </c:forEach>
 				    </form:select> 
+				    <span class=form-message-server> ${messageErrorMaKH}</span>
 				    <span class="form-message"></span>
 				</div>
 				<div class="form-group">
@@ -126,6 +127,7 @@
 				        path="soTien" 
 				        placeholder="Nhập soTien..." 
 				        value="${thongTinDonHang.soTien}"/> 
+				    <span class=form-message-server> ${messageErrorSoTien}</span>
 				    <span class="form-message"></span>
 				</div>
 				<div class="form-group">

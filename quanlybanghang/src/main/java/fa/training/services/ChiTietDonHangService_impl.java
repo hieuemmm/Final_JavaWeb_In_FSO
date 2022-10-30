@@ -11,6 +11,10 @@ public class ChiTietDonHangService_impl implements IChiTietDonHangService {
 	@Autowired
 	ChiTietDonHangRepository chiTietDonHangRepository;
 
+	/**
+	 * @Authour : HieuVV4
+	 * @Birthday : 2000-08-26
+	 */
 	@Override
 	public ChiTietDonHang add(ChiTietDonHang chiTietDonHang) {
 		return chiTietDonHangRepository.save(chiTietDonHang);
