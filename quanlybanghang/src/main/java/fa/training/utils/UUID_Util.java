@@ -8,8 +8,8 @@ import java.sql.Timestamp;
 public class UUID_Util {
 	/**
 	 * @param prefix 
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	public static String getNumber(String prefix, int length) {
 		return prefix + new Timestamp(System.currentTimeMillis())

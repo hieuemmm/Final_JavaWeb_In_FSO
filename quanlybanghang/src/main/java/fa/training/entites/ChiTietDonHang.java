@@ -19,16 +19,16 @@ public class ChiTietDonHang {
 	private DonHang donHang;
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	public ChiTietDonHang() {
 		super();
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	public ChiTietDonHang(String maCTDH, String maDH, String tenSP, int soTien, String ghiChu, DonHang donHang) {
 		super();

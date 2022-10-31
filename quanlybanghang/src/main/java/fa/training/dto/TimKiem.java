@@ -5,16 +5,16 @@ public class TimKiem {
 	private String ngayHenTra;
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	public TimKiem() {
 		super();
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	public TimKiem(String trangThaiDonHang, String ngayHenTra) {
 		super();

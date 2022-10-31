@@ -17,16 +17,16 @@ public class ThongTinDonHang {
 	private String ghiChu;
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	public ThongTinDonHang() {
 		super();
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	public ThongTinDonHang(String maKH, String tenKH, String gioiTinh, String soDienThoai, String maDH,
 			String ngayDatMay, String trangThaiThanhToan, String ngayTra, String trangThaiDonHang, String ngayHenTra,

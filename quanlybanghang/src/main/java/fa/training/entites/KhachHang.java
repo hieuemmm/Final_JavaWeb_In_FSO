@@ -19,16 +19,16 @@ public class KhachHang {
 	private List<DonHang> donHangs = new ArrayList<DonHang>();
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	public KhachHang() {
 		super();
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	public KhachHang(String maKH, String tenKH, String gioiTinh, String soDienThoai, List<DonHang> donHangs) {
 		super();

@@ -35,16 +35,16 @@ public class DonHang {
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	public DonHang() {
 		super();
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	public DonHang(String maDH, String maKH, String ngayDatMay, String trangThaiThanhToan, String ngayHenTra,
 			String trangThaiDonHang, String ngayTra, KhachHang khachHang, List<ChiTietDonHang> chiTietDonHangs) {

@@ -12,8 +12,8 @@ public class ChiTietDonHangService_impl implements IChiTietDonHangService {
 	ChiTietDonHangRepository chiTietDonHangRepository;
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@Override
 	public ChiTietDonHang add(ChiTietDonHang chiTietDonHang) {

@@ -16,8 +16,8 @@ public class DonHangService_Impl implements IDonHangService {
 	DonHangRepository donHangRepository;
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@Override
 	public List<DonHang> findAll() {
@@ -25,8 +25,8 @@ public class DonHangService_Impl implements IDonHangService {
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@Override
 	public DonHang add(DonHang donHang) {
@@ -34,8 +34,8 @@ public class DonHangService_Impl implements IDonHangService {
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@Override
 	public DonHang findById(String maDH) {
@@ -43,8 +43,8 @@ public class DonHangService_Impl implements IDonHangService {
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@Override
 	public List<DonHang> findAllByTimKiem(TimKiem timKiem) {

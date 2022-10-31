@@ -14,8 +14,8 @@ public class KhachHangService_impl implements IKhachHangService {
 	KhachHangRepository khachHangRepository;
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@Override
 	public List<KhachHang> findAll() {
@@ -23,8 +23,8 @@ public class KhachHangService_impl implements IKhachHangService {
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@Override
 	public KhachHang findById(String id) {
@@ -32,8 +32,8 @@ public class KhachHangService_impl implements IKhachHangService {
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@Override
 	public KhachHang add(KhachHang khachHang) {

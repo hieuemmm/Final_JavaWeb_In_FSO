@@ -31,8 +31,8 @@ public class ManagerController {
 	IKhachHangService khachHangService;
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@ModelAttribute("thongTinDonHang")
 	public ThongTinDonHang getThongTinDonHangObject() {
@@ -40,8 +40,8 @@ public class ManagerController {
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@ModelAttribute("timKiem")
 	public TimKiem getTimKiemObject() {
@@ -49,8 +49,8 @@ public class ManagerController {
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@GetMapping(value = "/")
 	public String defaultPage(Model model) {
@@ -58,8 +58,8 @@ public class ManagerController {
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@GetMapping("/list")
 	public String list(Model model) {
@@ -74,8 +74,8 @@ public class ManagerController {
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@GetMapping("/list-error")
 	public String listError(Model model) {
@@ -91,8 +91,8 @@ public class ManagerController {
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@GetMapping("/detail/{maDH}")
 	public String detail(Model model, @PathVariable(name = "maDH") String maDH) {
@@ -106,8 +106,8 @@ public class ManagerController {
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@GetMapping(value = "/add")
 	public String add(Model model) {
@@ -121,8 +121,8 @@ public class ManagerController {
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@PostMapping(value = "/saveAdd")
 	public String saveAdd(@ModelAttribute(name = "thongTinDonHang") ThongTinDonHang thongTinDonHang, Model model) {
@@ -186,8 +186,8 @@ public class ManagerController {
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@GetMapping(value = "/edit/{maDH}")
 	public String edit(Model model, @PathVariable(name = "maDH") String maDH) {
@@ -212,13 +212,14 @@ public class ManagerController {
 			model.addAttribute("thongTinDonHang", thongTinDonHang);
 			return "thongtindonhang/edit";
 		} catch (Exception e) {
+			System.out.println(e);
 			return "error";
 		}
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@PostMapping(value = "/saveEdit")
 	public String saveEdit(@ModelAttribute(name = "thongTinDonHang") ThongTinDonHang thongTinDonHang, Model model) {
@@ -257,8 +258,8 @@ public class ManagerController {
 	}
 
 	/**
-	 * @Authour : HieuVV4
-	 * @Birthday : 2000-08-26
+	 * @Authour : ThoPP
+	 * @Birthday : 1992-08-26
 	 */
 	@GetMapping(value = "/search")
 	public String filter(@ModelAttribute(name = "timKiem") TimKiem timKiem, Model model) {
